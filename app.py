@@ -7,8 +7,7 @@ st.set_page_config(
     page_title="Online Retail Dashboard",
     layout="wide"
 )
-
-df = pd.read_csv("cleaned_online_retail.csv")
+df = pd.read_csv("cleaned_online_retail.csv.gz", compression="gzip")
 
 df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
 
